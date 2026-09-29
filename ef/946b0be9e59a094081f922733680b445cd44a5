@@ -1,0 +1,34 @@
+.gitattributes
+  h_86c50d49f285ae 1-12
+.gitignore
+  h_86c50d49f285ae 1-8
+app/build.gradle.kts
+  h_86c50d49f285ae 1-47
+app/src/main/kotlin/org/example/App.kt
+  h_86c50d49f285ae 1-15
+app/src/test/kotlin/org/example/AppTest.kt
+  h_86c50d49f285ae 1-15
+gradle.properties
+  h_86c50d49f285ae 1-7
+gradle/libs.versions.toml
+  h_86c50d49f285ae 1-11
+gradle/wrapper/gradle-wrapper.properties
+  h_86c50d49f285ae 1-7
+gradlew
+  h_86c50d49f285ae 1-248
+gradlew.bat
+  h_86c50d49f285ae 1-93
+settings.gradle.kts
+  h_86c50d49f285ae 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ef946b0be9e59a094081f922733680b445cd44a5",
+  "prompts": {},
+  "humans": {
+    "h_86c50d49f285ae": {
+      "author": "man85 <man85@yandex.ru>"
+    }
+  }
+}
