@@ -4,16 +4,172 @@
 package org.example
 
 import org.awaitility.Awaitility.await
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.time.Duration
 import java.util.concurrent.atomic.AtomicInteger
 
 class OpenFeatureConfigurationTest {
-    @Test
-    fun onReadyCalledOnce1() {
+    private fun checkOnReadyInvocation() {
         val onReadyInvocationCount = AtomicInteger(0)
         val openFeatureConfiguration = OpenFeatureConfiguration()
-        openFeatureConfiguration.createAndSubscribeOpenFeatureAPI { onReadyInvocationCount.incrementAndGet() }
-        await().atMost(Duration.ofSeconds(30)).until { onReadyInvocationCount.get() == 1 }
+        openFeatureConfiguration.createAndSubscribeOpenFeatureAPI { details ->
+            println("${Thread.currentThread().name} == onReadyCalled $details")
+            onReadyInvocationCount.incrementAndGet()
+        }
+        println("== invocation count before check ${onReadyInvocationCount.get()}")
+        await().atMost(Duration.ofSeconds(10)).untilAsserted {
+            val actualCount = onReadyInvocationCount.get()
+            assertEquals(
+                1,
+                actualCount,
+                "Expected 1 call onReady, but was: $actualCount."
+            )
+        }
+    }
+
+    @Test
+    fun onReadyCalledOnce1() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce2() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce3() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce4() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce6() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce7() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce8() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce9() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce10() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce11() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce12() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce13() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce14() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce15() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce16() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce17() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce18() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce19() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce20() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce21() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce22() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce23() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce24() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce25() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce26() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce27() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce30() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce28() {
+        checkOnReadyInvocation()
+    }
+
+    @Test
+    fun onReadyCalledOnce29() {
+        checkOnReadyInvocation()
     }
 }
