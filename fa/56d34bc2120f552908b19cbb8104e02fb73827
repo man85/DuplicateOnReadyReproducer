@@ -1,0 +1,18 @@
+app/build.gradle.kts
+  h_86c50d49f285ae 25-27
+app/src/main/kotlin/org/example/OpenFeatureConfiguration.kt
+  h_86c50d49f285ae 6-22,24-43,45-60
+app/src/test/kotlin/org/example/OpenFeatureConfigurationTest.kt
+  h_86c50d49f285ae 6,9-11,13,16-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fa56d34bc2120f552908b19cbb8104e02fb73827",
+  "prompts": {},
+  "humans": {
+    "h_86c50d49f285ae": {
+      "author": "man85 <man85@yandex.ru>"
+    }
+  }
+}
